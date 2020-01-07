@@ -13,3 +13,7 @@ If you get lost in your terminal, the following will help you:
 `ls` lists all the files and folders in the current directory.
 
 `pwd` prints the name and path of the current directory.
+
+## Acknowledgment
+
+This is an extension of <https://github.com/github-fun> work.
