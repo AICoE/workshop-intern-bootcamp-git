@@ -14,7 +14,8 @@ Choose a name for your repo (ex. `myawesomerepo`). Choose the button to make the
 
 Copy the repo's URL. In your GitHub account, click the Repositories tab and click on your new repo. Click the green "clone or download" button on the right.
 
-you clone either with HTTPS or SSH(Recommended) URL. ![PACSPull Plugin](/images/clone-via-ssh.png)
+![PACSPull Plugin](/images/clone-via-ssh.png)<br>
+you clone either with HTTPS or SSH(Recommended) URL.
 
 In the terminal, navigate to your home directory and clone the repo with:
 

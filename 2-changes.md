@@ -3,7 +3,7 @@
 ## Step 2.1 Creating a file
 
 Create a file called `question.txt` in your new repo (inside the folder you downloaded with `git clone`) and add the question "What makes you excited about programming?".<br>
-Feel free to do this however you are most comfortable creating and editing files (MS Word is fine), but please save it as a `.txt` file instead of `.doc` or any other file extension.
+Feel free to do this however you are most comfortable creating and editing files, but please save it as a `.txt` file instead of `.doc` or any other file extension.
 
 ## Step 2.2 Tracking changes
 
@@ -47,7 +47,8 @@ To commit your changes and create a save point, use:
 
 Tip: `-m` allows you to specify a commit message. The commit message should be short and descriptive about the purpose of the commit or what you changed in the repo.
 
-Note: add the `-S` flag to the git commit command, to add signature to the commit `$ git commit -S -m your commit message`
+Note: add the `-S` flag to the git commit command, to add signature to the commit<br>
+`$ git commit -S -m your commit message`
 
 You should see:
 
