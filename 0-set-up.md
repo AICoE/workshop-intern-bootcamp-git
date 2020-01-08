@@ -84,8 +84,9 @@ git config --global user.name "Jane Doe"
 git config --global user.email "jane@redhat.com"
 ```
 
-## Step 0.5 Configure SSH connection with GitHub (if not already configured)
+## Step 0.6 Configure SSH connection with GitHub (if not already configured)
 
+Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username or password at each visit.[GitHub Docs](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh)<br>
 If you don't already have an SSH key, you must generate a new SSH key. If you're unsure whether you already have an SSH key, check for existing keys.
 
 ### Check for existing keys
@@ -139,3 +140,90 @@ If you don't already have an SSH key, you must generate a new SSH key. If you're
     ![PACSPull Plugin](images/ssh-key-paste.png)
 
 3. Voila! The SSH connection with GitHub is setup.
+
+## Step 0.7 Configure commit signature with GitHub (if not already configured)
+
+You can sign your work locally using GPG or S/MIME. GitHub will verify these signatures so other people will know that your commits come from a trusted source. GitHub will automatically sign commits you make using the GitHub web interface.[GitHub Docs](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
+
+GitHub supports several GPG key algorithms. If you try to add a key generated with an unsupported algorithm, you may encounter an error.<br>
+RSA ElGamal DSA ECDH ECDSA EdDSA
+
+### Check for existing keys
+
+1. open terminal.
+2. Use the gpg --list-secret-keys --keyid-format LONG command to list GPG keys for which you have both a public and private key. A private key is required for signing commits or tags.
+
+  ```
+  $ gpg --list-secret-keys --keyid-format LONG
+  /Users/hubot/.gnupg/secring.gpg
+  ------------------------------------
+  sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+  uid                          Hubot
+  ssb   4096R/42B317FD4BA89E7A 2016-03-10
+  ```
+
+### Generating a new GPG key
+
+_Note_: Before generating a new GPG key, make sure you've verified your email address.
+
+1. Download and install the [GPG command line tools](https://www.gnupg.org/download/) for your operating system. We generally recommend installing the latest version for your operating system.
+
+2. Open Terminal,to Generate a GPG key pair. Since there are multiple versions of GPG, you many need to consult the relevant man page to find the appropriate key generation command. Your key must use RSA.
+
+  ```
+  gpg --full-generate-key
+  ```
+
+3. At the prompt, specify the kind of key you want, or press Enter to accept the default RSA and RSA.
+
+4. Enter the desired key size. Your key must be at least 4096 bits.
+
+5. Enter the length of time the key should be valid. Press Enter to specify the default selection, indicating that the key doesn't expire.
+
+6. Verify that your selections are correct.
+
+7. Enter user Id info and secure passphrase
+
+8. Use the `gpg --list-secret-keys --keyid-format LONG` command to list GPG keys for which you have both a public and private key. A private key is required for signing commits or tags.
+
+  ```
+  gpg --list-secret-keys --keyid-format LONG
+  ```
+
+9. From the list of GPG keys, copy the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:
+
+  ```
+  $ gpg --list-secret-keys --keyid-format LONG
+  /Users/hubot/.gnupg/secring.gpg
+  ------------------------------------
+  sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
+  uid                          Hubot
+  ssb   4096R/42B317FD4BA89E7A 2016-03-10
+  ```
+
+10. Paste the text below, substituting in the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:
+
+  ```
+  $ gpg --armor --export 3AA5C34371567BD2
+  # Prints the GPG key ID, in ASCII armor format
+  ```
+
+11. Copy your GPG key, beginning with -----BEGIN PGP PUBLIC KEY BLOCK----- and ending with -----END PGP PUBLIC KEY BLOCK-----.
+
+### Adding the GPG key to GitHub
+
+1. Goto GitHub setting.
+2. From the sidebar, select **SSH and GPG keys**<br>
+  ![PACSPull Plugin](images/settings-sidebar-ssh-keys.png)
+3. Add new SSH Key<br>
+  ![PACSPull Plugin](images/gpg-add-gpg-key.png)
+4. In the `Title` Field, add a descriptive label for the new key. For example, `Red Hat Workstation`.
+5. Paste the copied GPG public key content to `Key` Field and Save.<br>
+  ![PACSPull Plugin](images/gpg-key-paste.png)
+6. To set your GPG signing key in Git, paste the text below, substituting in the GPG key ID you'd like to use. In this example, the GPG key ID is 3AA5C34371567BD2:
+
+  ```
+  $ git config --global user.signingkey 3AA5C34371567BD2
+  ```
+
+7. Voila! The GPG key is setup with GitHub.
