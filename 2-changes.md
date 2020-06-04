@@ -47,8 +47,8 @@ To commit your changes and create a save point, use:
 
 Tip: `-m` allows you to specify a commit message. The commit message should be short and descriptive about the purpose of the commit or what you changed in the repo.
 
-Note: add the `-S` flag to the git commit command, to add signature to the commit<br>
-`$ git commit -S -m your commit message`
+Note: add the `-s` flag to the git commit command, to add signature to the commit<br>
+`$ git commit -s -m your commit message`
 
 You should see:
 
