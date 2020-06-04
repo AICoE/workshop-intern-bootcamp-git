@@ -1,5 +1,10 @@
 Please enter your names and email ids below:
+<<<<<<< HEAD
 
 Anish aasthana@redhat.com
 Harshad hnalla@redhat.com
 Giorgos gkaranto@redhat.com
+
+Greg gdumas@redhat.com
+
+26e38ce... My first upstream contribution
