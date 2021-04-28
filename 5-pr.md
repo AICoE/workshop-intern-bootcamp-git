@@ -28,12 +28,12 @@ Ensure that your local repository is up-to-date with the changes in upstream.
 
 - Sync your branch with upstream `git fetch upstream`
 
-- Pick commits from upstream `git rebase upstream/master`.
+- Pick commits from upstream `git rebase upstream/main`.
 
 you would see:
 
 ```
-  hnalla@workstation ~/Demo/intern-bootcamp-git (feature) $ git rebase upstream/master
+  hnalla@workstation ~/Demo/intern-bootcamp-git (feature) $ git rebase upstream/main
   First, rewinding head to replay your work on top of it...
   Applying: added harshad
   Using index info to reconstruct a base tree...
@@ -51,7 +51,7 @@ In case you get conficts, resolve the conflicts manually by going to the files h
 
   ```
   Please enter your names and email ids below:
-  <<<<<< upstream/master
+  <<<<<< upstream/main
   anish aasthana@redhat.com
   ======
   Harshad hnalla@redhat.com
@@ -79,7 +79,7 @@ In case you get conficts, resolve the conflicts manually by going to the files h
   hint: See the 'Note about fast-forwards' in 'git push --help' for details.
   ```
 
-- As we made changes and rebased with upstream master, the origin git history has changed in local, but the git history of origin in remote is falling disturb. Hence a force push is required.<br>
+- As we made changes and rebased with upstream main, the origin git history has changed in local, but the git history of origin in remote is falling disturb. Hence a force push is required.<br>
   `git push -f origin feature`
 
 - Check back the PR you have raised: ![git branch console](/images/fix-conflicts.png)
