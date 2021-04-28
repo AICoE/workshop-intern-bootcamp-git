@@ -6,7 +6,7 @@ To check which branch you are currently on, use:<br>
 `git branch`
 
 It should say:<br>
-`* master`
+`* main`
 
 To create a new branch and switch into that branch at the same time, use:<br>
 `git checkout -b my-new-branch`
@@ -14,7 +14,7 @@ To create a new branch and switch into that branch at the same time, use:<br>
 You should see:<br>
 `Switched to a new branch 'my-new-branch'`
 
-This new branch will be an exact copy of the branch you were on when you called the command, which in this case is `master`.
+This new branch will be an exact copy of the branch you were on when you called the command, which in this case is `main`.
 
 ## Step 3.2 Modifying the branch
 
@@ -135,30 +135,30 @@ Now view all your branches with:<br>
 This should show you both branches, with the current one highlighted and with an asterisk (the order in which they are listed doesn't matter):
 
 ```
-master
+main
 * my-new-branch
 ```
 
-To back to the `master` branch, use:<br>
-`git checkout master`.
+To back to the `main` branch, use:<br>
+`git checkout main`.
 
-Now that you are on the original `master` branch, use `ls` again to list the files in your repo. What is different from the last time you looked at the contents of this folder?
+Now that you are on the original `main` branch, use `ls` again to list the files in your repo. What is different from the last time you looked at the contents of this folder?
 
 You should see that `random.txt` has disappeared! This is expected; this file was only added in `my-new-branch` and does not show up in other branches. If you switch back to `my-new-branch` using `git checkout my-new-branch` and enter `ls`, you will see the file again.
 
 ## Step 3.6 Merging the branch
 
-To check that you're on the `master` branch, use:<br>
+To check that you're on the `main` branch, use:<br>
 `git branch`
 
 You should see:
 
 ```
-* master
+* main
 my-new-branch
 ```
 
-Then, to merge changes from `my-new-branch` into your current branch (`master`), use:<br>
+Then, to merge changes from `my-new-branch` into your current branch (`main`), use:<br>
 `git merge my-new-branch`
 
 You should see:
@@ -172,24 +172,24 @@ Fast-forward
  create mode 100644 random.txt
 ```
 
-Use `ls` again to see your files. You should see that now `random.txt` shows up in the `master` branch. By merging `my-new-branch` into the `master` branch, you have brought the changes from `my-new-branch` into `master`.
+Use `ls` again to see your files. You should see that now `random.txt` shows up in the `main` branch. By merging `my-new-branch` into the `main` branch, you have brought the changes from `my-new-branch` into `main`.
 
 ## Step 3.7 Push changes to remote
 
-Push your original `master` branch to remote.
+Push your original `main` branch to remote.
 
-Make sure you are on the `master` branch with:<br>
+Make sure you are on the `main` branch with:<br>
 `git branch`
 
 You should see:
 
 ```
-* master
+* main
 my-new-branch
 ```
 
-If you don't see this, you can switch to the `master` branch by using:<br>
-`git checkout master`
+If you don't see this, you can switch to the `main` branch by using:<br>
+`git checkout main`
 
 Check that you have no untracked files with:<br>
 `git status`
@@ -197,14 +197,14 @@ Check that you have no untracked files with:<br>
 You should see:
 
 ```
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
 ```
 
-Push the new changes to remote with: `git push origin master`
+Push the new changes to remote with: `git push origin main`
 
 You should see:
 
@@ -216,11 +216,11 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (4/4), 403 bytes | 403.00 KiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0)
 To github.com:<gitusername>/<repo>.git
-   680c198..7286f7f  master -> master
+   680c198..7286f7f  main -> main
 ```
 
 You can check that your changes made it to remote by looking on your GitHub profile in the repo you created.
 
 ## Bonus Step
 
-If you have extra time, delete your new branch to clean up. Make sure you are on the master branch with `git branch` (or change to master with `git checkout master`) because you cannot delete a branch you're currently on. Then delete the other branch with `git branch -d my-new-branch`. Check that the delete worked by using `git branch` to list all local branches.
+If you have extra time, delete your new branch to clean up. Make sure you are on the main branch with `git branch` (or change to master with `git checkout main`) because you cannot delete a branch you're currently on. Then delete the other branch with `git branch -d my-new-branch`. Check that the delete worked by using `git branch` to list all local branches.

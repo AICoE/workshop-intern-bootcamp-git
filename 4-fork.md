@@ -33,7 +33,7 @@ Resolving deltas: 100% (9/9), done.
   `https://github.com/<your_github_account_name>/<repository_name>.git`.
 
   ```
-  hnalla@workstation ~/Demo/intern-bootcamp-git (master) $ git remote -v
+  hnalla@workstation ~/Demo/intern-bootcamp-git (main) $ git remote -v
   origin    git@github.com:harshad16/intern-bootcamp-git.git (fetch)
   origin    git@github.com:harshad16/intern-bootcamp-git.git (push)
   ```
@@ -44,7 +44,7 @@ Resolving deltas: 100% (9/9), done.
 - Check remote again `git remote -v`. Now you should see two remotes, namely `upstream` and `origin`. Verify if the urls are corect. `upstream` should be our repo url. `origin` should be your repo url.
 
   ```
-  hnalla@workstation ~/Demo/intern-bootcamp-git (master) $ git remote -v                                                              
+  hnalla@workstation ~/Demo/intern-bootcamp-git (main) $ git remote -v                                                              
   origin    git@github.com:harshad16/intern-bootcamp-git.git (fetch)
   origin    git@github.com:harshad16/intern-bootcamp-git.git (push)
   upstream    git@github.com:anishasthana/intern-bootcamp-git.git (fetch)
@@ -55,7 +55,7 @@ Resolving deltas: 100% (9/9), done.
 
 - Check current branch `git branch`
 
-  `* master (END)`
+  `* main (END)`
 
 - Add new branch `git checkout -b feature`
 

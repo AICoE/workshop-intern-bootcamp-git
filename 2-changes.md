@@ -14,7 +14,7 @@ You should see something like:
 
 ```
 On branch master
-Your branch is up to date with 'origin/master'.
+Your branch is up to date with 'origin/main'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -31,7 +31,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ```
 On branch master
-Your branch is up to date with 'origin/master'.
+Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
@@ -71,7 +71,7 @@ origin    git@github.com:<gitusername>/<repo>.git (push)
 ```
 
 Then to push your committed changes from your local machine to the remote GitHub repo, where others can see it or clone it, use:<br>
-`git push origin master`
+`git push origin main`
 
 If you had cloned using `HTTPS URL`. This should prompt you for your GitHub username and password. You won't see your password on the screen as you type it in.
 
@@ -87,5 +87,5 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To github.com:<gitusername>/<repo>.git
-   9e62e6c..41e204c  master -> master
+   9e62e6c..41e204c  main -> main
 ```
