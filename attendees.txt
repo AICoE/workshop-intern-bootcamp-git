@@ -2,3 +2,6 @@ Please enter your names and email ids below:
 AICoE aicoe@redhat.com
 Rohit rmohnani42@gmail.com
 Daniel dacho@redhat.com
+Anish aasthana@redhat.com
+Oleg osilkin@redhat.com
+Harshad hnalla@redhat.com
