@@ -17,7 +17,7 @@ Consider our [workshop repository](https://github.com/anishasthana/intern-bootca
 _Note_: You will be cloning the repository which is a fork of our repository also called upstream in this case.
 
 ```
-hnalla@workstation ~/Demo $ git clone git@github.com:harshad16/intern-bootcamp-git.git                                          
+hnalla@workstation ~/Demo $ git clone git@github.com:harshad16/intern-bootcamp-git.git
 Cloning into 'intern-bootcamp-git'...
 remote: Enumerating objects: 40, done.
 remote: Counting objects: 100% (40/40), done.
@@ -44,7 +44,7 @@ Resolving deltas: 100% (9/9), done.
 - Check remote again `git remote -v`. Now you should see two remotes, namely `upstream` and `origin`. Verify if the urls are corect. `upstream` should be our repo url. `origin` should be your repo url.
 
   ```
-  hnalla@workstation ~/Demo/intern-bootcamp-git (main) $ git remote -v                                                              
+  hnalla@workstation ~/Demo/intern-bootcamp-git (main) $ git remote -v
   origin    git@github.com:harshad16/intern-bootcamp-git.git (fetch)
   origin    git@github.com:harshad16/intern-bootcamp-git.git (push)
   upstream    git@github.com:anishasthana/intern-bootcamp-git.git (fetch)
