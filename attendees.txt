@@ -5,3 +5,4 @@ hnalla@redhat.com
 Claire cburkhar@redhat.com
 Aman abatra@redhat.com
 David djachimo@redhat.com
+Harshad hnalla@redhat.com
